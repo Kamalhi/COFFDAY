@@ -793,13 +793,13 @@ section {
 
   /* Product */
   .items-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     padding: 0 10px;
-    gap: 15px;
   }
 
   .item img {
-    width: 100%;
+    width: 60%;
     height: auto;
   }
 
