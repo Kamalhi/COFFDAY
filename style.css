@@ -373,16 +373,8 @@ section {
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
   gap: 30px;
   padding: 0 50px;
-  /* display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  align-items: center;
-  width: 100%;
-  gap: 30px; */
-  /* margin: 0 50px 0 50px; */
 }
 
 .item {
@@ -397,7 +389,7 @@ section {
 }
 
 .item img {
-  width: 60%;
+  width: 55%;
   height: 200px;
   display: block;
   margin: 0 auto;
@@ -682,4 +674,242 @@ section {
   font-style: normal;
   font-weight: 200;
   color: black;
+}
+
+/* Media Quiries */
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
+  /* .nav-left ul {
+    display: none;
+  } */
+
+  .nav-left ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 85px;
+    right: -100%;
+    height: calc(100%-60px);
+    width: 70%;
+    max-width: 300px;
+    background: var(--bg-mediumwhite);
+    padding: 40px 20px;
+    gap: 20px;
+    transition: right 0.5s ease-in-out;
+    z-index: 1000;
+    border-radius: 0 0 0 10px;
+  }
+
+  .nav-left ul.active {
+    right: 0;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .search-bar {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 3px 6px;
+  }
+
+  .search-bar input {
+    font-size: 12px;
+  }
+
+  .search-bar input::placeholder {
+    font-size: 12px;
+  }
+
+  .menu-icon {
+    stroke-width: 2;
+    display: block;
+  }
+
+  /* Main - Hero */
+  .hero-text h2 {
+    font-size: 32px;
+  }
+
+  .hero-text h3 {
+    font-size: 24px;
+  }
+
+  .hero-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  /* Product */
+  .items-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .item img {
+    width: 80%;
+    height: auto;
+  }
+
+  /* Contact */
+  .contact-wrapper {
+    max-width: 100%;
+    padding: 20px 10px;
+  }
+
+  .form-input {
+    width: 100%;
+  }
+
+  .form-btn {
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 10px;
+    width: 50%;
+  }
+
+  .btn-cancel,
+  .btn-submit {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .footer-link {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .title-program {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .services-program,
+  .about-program,
+  .category-program,
+  .following-program,
+  .paymentfind-program {
+    align-items: center;
+  }
+
+  .program-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .programicon-link {
+    justify-content: center;
+  }
+
+  .programpayment-link {
+    margin-top: 5%;
+    align-items: center;
+  }
+
+  .about-container {
+    scroll-margin-top: 80px;
+    padding-top: 10%;
+  }
+
+  .product-container {
+    scroll-margin-top: 10px;
+    padding-top: 10%;
+  }
+
+  .contact-container {
+    scroll-margin-top: 80px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768.01px) and (max-width: 1024px) {
+  .navbar-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    gap: 8px;
+  }
+
+  .nav-left ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 85px;
+    right: -100%;
+    height: calc(100%-60px);
+    width: 70%;
+    max-width: 300px;
+    background: var(--bg-mediumwhite);
+    padding: 40px 20px;
+    gap: 20px;
+    transition: right 0.5s ease-in-out;
+    z-index: 1000;
+    border-radius: 0 0 0 10px;
+  }
+
+  .nav-left ul.active {
+    right: 0;
+  }
+
+  .menu-icon {
+    stroke-width: 2.5;
+    display: block;
+  }
+
+  /* Product */
+  .items-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  /* Footer */
+  .footer-link {
+    gap: 3px;
+  }
+
+  .title-program {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .services-program,
+  .services-program,
+  .about-program,
+  .category-program,
+  .following-program,
+  .paymentfind-program {
+    gap: 5px;
+  }
+
+  .about-container {
+    scroll-margin-top: 80px;
+    padding-top: 5%;
+  }
+
+  .product-container {
+    scroll-margin-top: 10px;
+    padding-top: 10%;
+  }
+
+  .contact-container {
+    scroll-margin-top: 80px;
+  }
 }
