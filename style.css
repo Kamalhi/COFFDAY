@@ -153,7 +153,8 @@ section {
   stroke-width: 2;
 }
 
-.menu-icon {
+.menu-icon,
+.mobile-icons {
   display: none;
 }
 
@@ -677,6 +678,170 @@ section {
 }
 
 /* Media Quiries */
+
+/* Small Mobile */
+@media (max-width: 600px) {
+  /* Navbar */
+  .brand-name a {
+    font-size: 1.5rem;
+  }
+
+  .nav-left ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* height: calc(100%-60px); */
+    width: 70%;
+    max-width: 300px;
+    background: var(--bg-mediumwhite);
+    padding: 80px 20px 40px 20px;
+    gap: 20px;
+    transition: right 0.5s ease-in-out;
+    z-index: 1000;
+    border-radius: 0 0 0 10px;
+  }
+
+  .nav-left ul.active {
+    right: 0;
+  }
+
+  .mobile-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .mobile-icons svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .nav-right > div:not(.search-bar):not(.hamburger-menu) {
+    display: none;
+  }
+
+  .nav-right {
+    display: flex;
+    margin-left: auto;
+    gap: 1px;
+  }
+
+  .search-bar {
+    width: 100px;
+    margin: 0;
+    padding: 2px 4px;
+  }
+
+  .search-bar input {
+    font-size: 10px;
+    width: 100%;
+  }
+
+  .moon-icon,
+  .shopping-icon {
+    display: none;
+  }
+
+  .menu-icon {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Hero */
+  .hero-text h2 {
+    font-size: 20px;
+  }
+
+  .hero-text h3 {
+    font-size: 16px;
+  }
+
+  .hero-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  /* About */
+  .about-container {
+    padding-top: 15%;
+  }
+
+  .container-abouttext {
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .container-abouttext p {
+    max-width: 90%;
+    padding-left: 5%;
+    font-size: 12px;
+  }
+
+  .container-quicksocial {
+    width: 60px;
+  }
+
+  .icon-social a img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Product */
+  .items-container {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+    gap: 15px;
+  }
+
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Contact */
+  .contact-wrapper {
+    max-width: 100%;
+    padding: 15px 10px;
+  }
+
+  .form-input {
+    width: 100%;
+  }
+
+  .form-input input,
+  .form-input textarea {
+    font-size: 14px;
+  }
+
+  .form-btn {
+    width: 100%;
+    gap: 8px;
+  }
+
+  /* Footer */
+  .footer-link {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .title-program {
+    font-size: 10px;
+  }
+
+  .programicon-link a img,
+  .ewallet-payment img,
+  .cardbank-payment img,
+  .findus img {
+    width: 20px;
+    height: 20px;
+  }
+}
 
 /* Mobile */
 @media (max-width: 768px) {
