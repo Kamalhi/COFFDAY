@@ -682,6 +682,12 @@ section {
 /* Small Mobile */
 @media (max-width: 600px) {
   /* Navbar */
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
   .brand-name a {
     font-size: 1.5rem;
   }
@@ -690,13 +696,13 @@ section {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0;
+    top: 76px;
     right: -100%;
     /* height: calc(100%-60px); */
     width: 70%;
     max-width: 300px;
     background: var(--bg-mediumwhite);
-    padding: 80px 20px 40px 20px;
+    padding: 20px 20px 20px 20px;
     gap: 20px;
     transition: right 0.5s ease-in-out;
     z-index: 1000;
@@ -745,6 +751,7 @@ section {
   }
 
   .menu-icon {
+    display: flex;
     width: 20px;
     height: 20px;
     stroke-width: 2;
@@ -795,11 +802,11 @@ section {
   .items-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
   .item img {
-    width: 60%;
+    width: 50%;
     height: auto;
   }
 
@@ -826,12 +833,36 @@ section {
   /* Footer */
   .footer-link {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .services-program,
+  .about-program,
+  .category-program,
+  .following-program,
+  .paymentfind-program {
+    align-items: center;
   }
 
   .title-program {
     font-size: 10px;
+  }
+
+  .program-link {
+    align-items: center;
+  }
+
+  .programicon-link {
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+  }
+
+  .programpayment-link {
+    margin-top: 5%;
+    align-items: center;
   }
 
   .programicon-link a img,
@@ -841,10 +872,24 @@ section {
     width: 20px;
     height: 20px;
   }
+
+  .about-container {
+    scroll-margin-top: 75px;
+    padding-top: 10%;
+  }
+
+  .product-container {
+    scroll-margin-top: 10px;
+    padding-top: 25%;
+  }
+
+  .contact-container {
+    scroll-margin-top: 80px;
+  }
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (min-width: 600.01px) and (max-width: 768px) {
   .navbar-container {
     flex-direction: row;
     justify-content: space-between;
